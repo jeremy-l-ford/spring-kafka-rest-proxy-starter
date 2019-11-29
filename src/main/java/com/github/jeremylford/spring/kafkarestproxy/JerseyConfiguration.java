@@ -29,11 +29,14 @@ import io.confluent.rest.exceptions.WebApplicationExceptionMapper;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.servlet.init.FilterUrlMappingsProviderImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
+import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
 @Configuration
+@AutoConfigureBefore(JerseyAutoConfiguration.class)
 public class JerseyConfiguration extends ResourceConfig {
 
     @Autowired
