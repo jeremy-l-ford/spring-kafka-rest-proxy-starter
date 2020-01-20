@@ -5,3 +5,7 @@ The Apache Software Foundation (https://www.apache.org/).
 
 This distribution has a binary dependency on jersey, which is available under the CDDL
 License. The source code of jersey can be found at https://github.com/jersey/jersey/.
+
+This distribution has a binary dependency on Confluent Kafka Rest Proxy, which is available under the
+Confluent Community License.  The source code of Confluent Kafka Rest Proxy can be found at
+https://github.com/confluentinc/kafka-rest.

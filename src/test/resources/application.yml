@@ -3,6 +3,24 @@ kafka:
     zookeeper-connect: localhost:2181
     bootstrap-servers: localhost:9092
 
+spring:
+  jersey:
+    application-path: /proxy-api
+    type: filter
+
+
 #spring:
 #  jersey:
+management:
+  health:
+#    kafkaconnect:
+#      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
 #    application-path: /proxy

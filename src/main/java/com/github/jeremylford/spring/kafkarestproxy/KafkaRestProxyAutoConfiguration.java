@@ -29,6 +29,8 @@ import io.confluent.kafkarest.extension.KafkaRestContextProvider;
 import io.confluent.kafkarest.v2.KafkaConsumerManager;
 import io.confluent.rest.RestConfigException;
 import org.apache.kafka.clients.admin.AdminClient;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
+import org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,6 +41,7 @@ import java.lang.reflect.Proxy;
 @EnableConfigurationProperties({KafkaRestProperties.class})
 @Configuration
 @Import(JerseyConfiguration.class)
+@AutoConfigureBefore(JerseyAutoConfiguration.class)
 public class KafkaRestProxyAutoConfiguration {
 
 
