@@ -20,8 +20,8 @@ version = '0.0.1-SNAPSHOT'
 defaultTasks("clean", "build")
 
 compileJava {
-	sourceCompatibility = 1.8
-	targetCompatibility = 1.8
+	sourceCompatibility = 11
+	targetCompatibility = 11
 	options.encoding = "UTF-8"
 }
 
@@ -68,6 +68,8 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
 //	testImplementation("org.springframework.kafka:spring-kafka-test:${springBootVersion}")
 	testImplementation("junit:junit:4.12")
+
+	testImplementation("org.testcontainers:redpanda:1.18.1")
 
 	testRuntimeOnly group: 'org.springframework', name: 'spring-webmvc', version: '5.3.27'
 
